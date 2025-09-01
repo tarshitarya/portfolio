@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-</head>
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4;">
+{% extends "index.html" %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block content %}
 
     <!-- Header Section -->
     <header style="background-color: #333; color: white; text-align: center; padding: 50px 0;">
@@ -66,10 +63,5 @@
         <p style="text-align: center; margin: 20px 0;">Phone: +91 12345 67890</p>
     </section>
 
-    <!-- Footer -->
-    <footer style="background-color: #333; color: white; text-align: center; padding: 20px 0;">
-        &copy; 2025 Tarshit. All rights reserved.
-    </footer>
 
-</body>
-</html>
+{% endblock %}

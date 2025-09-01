@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Contact Me</title>
-</head>
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9;">
+{% extends "index.html" %}
+{% block title %}Contact{% endblock %}
+{% block content %}
 
     <!-- Page Header -->
     <div style="background-color: #333; color: white; padding: 20px; text-align: center;">
@@ -33,10 +29,4 @@
         </form>
     </div>
 
-    <!-- Footer -->
-    <div style="text-align: center; padding: 15px; background-color: #333; color: white; margin-top: 40px;">
-        <p style="margin: 0;">&copy; 2025 Tarshit | My Portfolio</p>
-    </div>
-
-</body>
-</html>
+{% endblock %}

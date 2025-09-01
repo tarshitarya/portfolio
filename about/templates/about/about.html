@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>About Me</title>
-</head>
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9;">
+{% extends "index.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+
 
   <!-- Header -->
   <header style="background: #333; color: white; text-align: center; padding: 20px;">
@@ -58,10 +57,4 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer style="background: #333; color: white; text-align: center; padding: 10px;">
-    <p style="margin: 0;">© 2025 Tarshit | My Portfolio</p>
-  </footer>
-
-</body>
-</html>
+{% endblock %}
