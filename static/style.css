@@ -5,8 +5,23 @@
   box-sizing: border-box;
 }
 
+.home-background {
+  background-image: url("/static/img/home-bg.jpg");
+  /* filter: blur(50px); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Optional: text color over image */
+  text-align: center;
+}
+
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
@@ -61,7 +76,7 @@ footer {
   color: #fff;
   text-align: center;
   padding: 15px 0;
-  margin-top: 40px;
+  margin-top: 0px;
   font-size: 0.9rem;
 }
 
