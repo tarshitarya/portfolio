@@ -6,7 +6,7 @@
 }
 
 .home-background {
-  background-image: url("/static/img/home-bg.jpg");
+  background-image: url("/myPortFolio/static/img/img.jpg");
   /* filter: blur(50px); */
   background-size: cover;
   background-repeat: no-repeat;
