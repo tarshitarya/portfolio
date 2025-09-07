@@ -6,9 +6,9 @@
 }
 
 .home-background {
-  background-image: url("/myPortFolio/static/img/img.jpg");
-  /* filter: blur(50px); */
+  background-image: url("{% static 'img/img.jpg' %}");
   background-size: cover;
+  font-family: cursive, Courier, monospace;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
@@ -18,7 +18,6 @@
   color: white; /* Optional: text color over image */
   text-align: center;
 }
-
 
 body {
   font-family: 'Montserrat', sans-serif;

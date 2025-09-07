@@ -11,7 +11,9 @@
     <!-- Contact Form Section -->
     <div style="max-width: 600px; margin: 40px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
         <h2 style="text-align: center; color: #333;">Get in Touch</h2>
-        
+
+
+{% comment %}         
         <form style="display: flex; flex-direction: column; gap: 15px;">
             <input type="text" placeholder="Your Name" 
                    style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
@@ -26,7 +28,44 @@
                     style="padding: 12px; background-color: #333; color: white; border: none; border-radius: 5px; cursor: pointer;">
                 Send Message
             </button>
-        </form>
+
+            
+            {% for contacts in contacts %}
+            <h5>{{contacts.name}}</h5>
+            {% endfor %}
+        </form> 
+{% endcomment %}
+
+
+<form method="post" style="display: flex; flex-direction: column; gap: 15px;">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" 
+            style="padding: 12px; background-color: #333; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Send Message
+    </button>
+</form>
+
+<hr>
+
+<h3>Previous Messages</h3>
+<ul>
+    {% for contact in Contacts %}
+        <li><strong>{{ contact.name }}</strong>: {{ contact.message }}</li>
+    {% empty %}
+        <li>No messages yet.</li>
+    {% endfor %}
+</ul>
+
+{% if success %}
+    <p style="color: green; text-align: center;">
+        ✅ Thank you, <strong>{{ user_name }}</strong>, for your message!
+    </p>
+{% endif %}
+
+
+
     </div>
 
 {% endblock %}
