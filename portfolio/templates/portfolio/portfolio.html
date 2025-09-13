@@ -1,45 +1,57 @@
-{% extends "index.html" %}
-{% load static %}
-
-{% block title %}Portfolio{% endblock %}
-
-{% block content %}
+{% extends "index.html" %} {% load static %} {% block title %}Portfolio{%
+endblock %} {% block content %}
 <main class="portfolio-page">
-
   <section class="hero">
     <div class="hero-text">
       <h1>Tarshit Arya</h1>
-      <p class="tagline">Web Developer | Backend Developer | Python, Django & FastAPI</p>
+      <p class="tagline">
+        Web Developer | Backend Developer | Python, Django & FastAPI
+      </p>
     </div>
     <div class="hero-avatar">
       <img src="{% static 'img/logo_1.png' %}" alt="Tarshit Split Persona" />
-    </div> 
+    </div>
   </section>
 
-
   <!-- About Me Section -->
-<!-- About Me Section (Styled as Code Editor) -->
-<section class="portfolio-about">
-  <h2>About Me</h2>
-  <div class="code-editor">
-    <div class="editor-header">
-      <span class="dot red"></span>
-      <span class="dot yellow"></span>
-      <span class="dot green"></span>
+  <!-- About Me Section (Styled as Code Editor) -->
+  <section class="portfolio-about">
+    <h2>About Me</h2>
+    <div class="code-editor">
+      <div class="editor-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <div class="code-content">
+        <p><span class="comment"># Who am I?</span></p>
+        <p>
+          <span class="keyword">name</span> =
+          <span class="string">"Tarshit Arya"</span>
+        </p>
+        <p>
+          <span class="keyword">role</span> =
+          <span class="string">"Backend Developer"</span>
+        </p>
+        <p>
+          <span class="keyword">stack</span> = [<span class="string"
+            >"Python"</span
+          >, <span class="string">"Django"</span>,
+          <span class="string">"FastAPI"</span>]
+        </p>
+        <br />
+        <p>
+          <span class="keyword">def</span>
+          <span class="function">introduce</span>():
+        </p>
+        <p class="indent">
+          <span class="keyword">print</span>(<span class="string"
+            >f"Hi, I'm {name}, a {role} skilled in {', '.join(stack)}"</span
+          >)
+        </p>
+      </div>
     </div>
-    <div class="code-content">
-      <p><span class="comment">// Who am I?</span></p>
-      <p><span class="keyword">const</span> name = <span class="string">"Tarshit Arya"</span>;</p>
-      <p><span class="keyword">const</span> role = <span class="string">"Backend Developer"</span>;</p>
-      <p><span class="keyword">const</span> stack = [<span class="string">"Python"</span>, <span class="string">"Django"</span>, <span class="string">"FastAPI"</span>];</p>
-      <br />
-      <p><span class="keyword">function</span> introduce() {'{'}</p>
-      <p class="indent">console.log(<span class="string">`Hi, I'm ${name}, a ${role} skilled in ${stack}`</span>);</p>
-      <p>{'}'}</p>
-    </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Skills Section -->
   <section class="portfolio-skills">
@@ -47,9 +59,17 @@
     <div class="skill-grid">
       <span><strong>Backend:</strong> Python, Django</span>
       <span><strong>Frontend:</strong> HTML, CSS, Bootstrap</span>
-      <span><strong>Database:</strong> Django ORM, PostgreSQL, MySQL, SQLite</span>
-      <span><strong>Authentication:</strong> Django’s built-in authentication system</span>
-      <span><strong>Media Handling:</strong> Django Media File support for image uploads</span>
+      <span
+        ><strong>Database:</strong> Django ORM, PostgreSQL, MySQL, SQLite</span
+      >
+      <span
+        ><strong>Authentication:</strong> Django’s built-in authentication
+        system</span
+      >
+      <span
+        ><strong>Media Handling:</strong> Django Media File support for image
+        uploads</span
+      >
       <span><strong>Tools:</strong> Git, GitHub, VS Code</span>
     </div>
   </section>
@@ -61,13 +81,30 @@
       <div class="project-card">
         <h3>Portfolio Website</h3>
         <p>
-          I built a personal portfolio website to showcase my skills, experience, and projects as a backend developer. The site features a clean, responsive design using HTML, CSS, and Bootstrap, providing easy navigation across sections like About Me, Projects, and Contact. It highlights my expertise in Python, Django, FastAPI, and REST APIs, along with downloadable resumes and links to my GitHub. The portfolio acts as a professional online presence, demonstrating my coding abilities and project work while offering a clear way for potential employers or clients to learn about me and get in touch.
+          I built a personal portfolio website to showcase my skills,
+          experience, and projects as a backend developer. The site features a
+          clean, responsive design using HTML, CSS, and Bootstrap, providing
+          easy navigation across sections like About Me, Projects, and Contact.
+          It highlights my expertise in Python, Django, FastAPI, and REST APIs,
+          along with downloadable resumes and links to my GitHub. The portfolio
+          acts as a professional online presence, demonstrating my coding
+          abilities and project work while offering a clear way for potential
+          employers or clients to learn about me and get in touch.
         </p>
       </div>
       <div class="project-card">
         <h3>Blog Web</h3>
         <p>
-          I developed a full-featured blog application using Python and Django where users can register, log in, and create posts with images. The app supports complete CRUD operations — users can create, read, update, and delete their own posts while viewing others’ blogs. Authentication and authorization ensure secure user interactions, restricting editing and deleting rights to post owners only. The project incorporates Django’s media file handling for image uploads and showcases my backend development skills, including database design, user authentication, and building interactive, user-friendly web applications.
+          I developed a full-featured blog application using Python and Django
+          where users can register, log in, and create posts with images. The
+          app supports complete CRUD operations — users can create, read,
+          update, and delete their own posts while viewing others’ blogs.
+          Authentication and authorization ensure secure user interactions,
+          restricting editing and deleting rights to post owners only. The
+          project incorporates Django’s media file handling for image uploads
+          and showcases my backend development skills, including database
+          design, user authentication, and building interactive, user-friendly
+          web applications.
         </p>
       </div>
     </div>
@@ -76,9 +113,10 @@
   <!-- Contact Section -->
   <section class="portfolio-contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:aryatarshit@gmail.com">aryatarshit@gmail.com</a></p>
+    <p>
+      Email: <a href="mailto:aryatarshit@gmail.com">aryatarshit@gmail.com</a>
+    </p>
     <p>Phone: <a href="tel:+919997589331">+91 99975 89331</a></p>
   </section>
-  
 </main>
 {% endblock %}
