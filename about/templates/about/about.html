@@ -1,76 +1,82 @@
 {% extends "index.html" %}
+{% load static %}
 
 {% block title %}About{% endblock %}
 
 {% block content %}
+<main class="about-page">
 
+  <!-- Hero / Avatar + Intro Title -->
+  <section class="hero">
+    <div class="hero-avatar">
+      <img src="{% static 'img/logo.png' %}" alt="Tarshit Split Persona" />
+    </div> 
+    <div class="hero-text">
+      <h1>Hello, I’m Tarshit Arya</h1>
+      <p class="tagline">Web Developer | Backend Developer | Python, Django & FastAPI</p>
+    </div>
+  </section>
 
-  <!-- Header -->
-  <header style="background: #333; color: white; text-align: center; padding: 20px;">
-    <h1 style="margin: 0;">About Me</h1>
-    {% comment %} <p style="margin: 0;">Get to know me better</p> {% endcomment %}
-  </header>
-
-  <main style="max-width: 900px; margin: 20px auto; padding: 20px;">
-
-    <!-- Intro Section -->
-    <section style="background: white; padding: 20px; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-      <h2 style="margin-top: 0; color: #333;">👋 I'm a Developer.</h2>
-      <p style="line-height: 1.6; color: #444;">
-        I'm a passionate backend developer with a strong focus on Python, Django, and FastAPI. I specialize in building efficient, scalable, and secure APIs and web applications. With a deep understanding of backend logic, database architecture, and RESTful design, I enjoy turning complex problems into elegant code solutions.
+  <!-- About Me Section -->
+  <section class="about-me">
+    <div class="content">
+      <h2>About Me</h2>
+      <p>
+        I'm a passionate backend developer with a focus on building scalable, high-performance applications using Python, Django, and FastAPI. I specialize in designing and developing robust RESTful APIs, database architectures, and efficient server-side logic to power modern web and mobile applications.
       </p>
-    </section>
+      <br>
+      <p>
+        With a strong foundation in clean code practices, system design, and API development, I strive to write code that not only works — but lasts. Whether it's building microservices, optimizing backend performance, or integrating third-party APIs, I enjoy solving real-world problems with clean and efficient solutions.
+      </p>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section style="background: white; padding: 20px; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-      <h2 style="margin-top: 0; color: #333;">💡 Skills</h2>
-      <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap;">
-        <li style="background: #333; color: white; padding: 10px 15px; margin: 5px; border-radius: 3px;">Python</li>
-        <li style="background: #333; color: white; padding: 10px 15px; margin: 5px; border-radius: 3px;">Django</li>
-        <li style="background: #333; color: white; padding: 10px 15px; margin: 5px; border-radius: 3px;">Fast API</li>
-        <li style="background: #333; color: white; padding: 10px 15px; margin: 5px; border-radius: 3px;">Git & GitHub</li>
-        <li style="background: #333; color: white; padding: 10px 15px; margin: 5px; border-radius: 3px;">HTML</li>
-        <li style="background: #333; color: white; padding: 10px 15px; margin: 5px; border-radius: 3px;">CSS</li>
-        <li style="background: #333; color: white; padding: 10px 15px; margin: 5px; border-radius: 3px;">Bootstrap</li>
-        <li style="background: #333; color: white; padding: 10px 15px; margin: 5px; border-radius: 3px;">SQL</li>
-      </ul>
-    </section>
+  <!-- Skills Section -->
+  <section class="skills">
+    <h2>Skills & Tools</h2>
+    <div class="skill-grid project-list">
+      <div class="skill-item"><strong>Languages:</strong> Python, Django, SQL, HTML, CSS, C++</div>
+      <div class="skill-item"><strong>Framworks:</strong> Django, Django Rest Framework</div>
+      <div class="skill-item"><strong>Databases:</strong> Django ORM, PostgreSQL, MySQL, SQLite</div>
+      <div class="skill-item"><strong>Tools:</strong> Git, GitHub, VS Code</div>
+      <div class="skill-item"><strong>APIs:</strong> FastAPI, Rest API</div>
+      <div class="skill-item"><strong>Other:</strong> Authentication, Agile Basics, Excel</div>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section style="background: white; padding: 20px; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-      <h2 style="margin-top: 0; color: #333;">🚀 Projects</h2>
-      <ul style="padding-left: 20px; color: #444; line-height: 1.6;">
-        <br>
-        <li>
-          <h4>PORTFOLIO WEBSITE</h4>
-          <p><b>Tech Stack:</b> Python, Django, HTML, CSS, Bootstrap, SQLite, Git</p>
-          <p>Developed a dynamic personal portfolio website using Django for the backend and HTML, CSS, and Bootstrap for the
-frontend. The site showcases personal projects, technical skills, contact information, and work history. Implemented
-Django templates for rendering dynamic content, and integrated a contact form with backend form validation and email
-functionality. Utilized Django’s admin panel for easy content management and SQLite for data storage. </p>
-        </li>
-        <br>
-        <li>
-          <h4>E-COMMERCE WEBSITE</h4>
-          <p><b>Tech Stack:</b> Python, Django, HTML, CSS, Bootstrap, SQLite, Git</p>
-          <p>Built a fully functional E-commerce web application using Django for backend logic and HTML/CSS/Bootstrap for the
-frontend. The platform allows users to browse products, add items to a cart, register and log in, and place orders.
-Implemented Django's authentication system for secure login, and created custom models for products, orders, and user
-profiles. Admin dashboard enables product and order management. Designed a responsive and user-friendly interface to
-ensure accessibility across all devices.</p>
-        </li>
-      </ul>
-    </section>
+  <!-- Projects / Experience Section -->
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p><strong>Stack:</strong> Python, Django, SQLite, HTML, CSS, Bootstrap</p>
+        <p>I built my personal portfolio and a blog website using Python and Django. The portfolio showcases my skills, projects, and experience, while the blog app allows user registration, image-supported blog posts, and full CRUD functionality. Both projects highlight my backend development skills and ability to build dynamic, database-driven web applications.</p>
+      </div>
+      <div class="project">
+        <h3>Blog Website</h3>
+        <p><strong>Stack:</strong> Python, Django, SQLite, HTML, CSS, Bootstrap</p>
+        <p>I developed a blog website using Python and Django that allows users to register, log in, and create blog posts with image uploads. Users can view posts from others, and have full control over their own content with options to edit or delete posts. The app includes user authentication and authorization.</p>
+      </div>
+      <div class="project">
+        <h3>E‑Commerce Platform</h3>
+        <p><strong>Stack:</strong> Python, Django, HTML, CSS, Bootstrap, Git</p>
+        <p>Complete e‑commerce solution with authentication, cart, order flow, and admin dashboard.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Qualification Section -->
-    <section style="background: white; padding: 20px; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-      <h2 style="margin-top: 0; color: #333;">🎓 Qualifications</h2>
-      <ul style="padding-left: 20px; color: #444; line-height: 1.6;">
-        <li><b>Bachelor’s Degree</b> in Technology – Ch. Charan Singh University, Meerut</li>
-        <li>Backend Development Training – Python & Django</li>
-      </ul>
-    </section>
+  <!-- Qualifications / Timeline Section -->
+  <section class="qualifications">
+    <h2>Qualifications</h2>
+    <ul>
+      <li><strong>Bachelor of Technology</strong></li>
+      <li>Ch. Charan Singh University, Meerut <small>(2019-2022)</small></li>
+      <li><strong>Polytechnic Diploma</strong></li>
+      <li>Govt. Polytechnic, Mainpuri <small>(2015-2019)</small></li>
+      <!-- maybe timeline style or icons if you want -->
+    </ul>
+  </section>
 
-  </main>
-
+</main>
 {% endblock %}

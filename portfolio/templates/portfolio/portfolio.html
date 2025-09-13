@@ -1,83 +1,84 @@
 {% extends "index.html" %}
+{% load static %}
 
 {% block title %}Portfolio{% endblock %}
 
 {% block content %}
+<main class="portfolio-page">
 
-    <!-- Header Section -->
-    <header style="background-color: #333; color: white; text-align: center; padding: 50px 0;">
-        <h1 style="margin: 0; font-size: 3em;">Tarshit</h1>
-        <p style="font-size: 1.2em;">Web Developer | Django Developer | Python </p>
-    </header>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Tarshit Arya</h1>
+      <p class="tagline">Web Developer | Backend Developer | Python, Django & FastAPI</p>
+    </div>
+    <div class="hero-avatar">
+      <img src="{% static 'img/logo_1.png' %}" alt="Tarshit Split Persona" />
+    </div> 
+  </section>
 
-    <!-- About Me Section -->
-    <section style="padding: 50px; background-color: #fff;">
-        <h2 style="text-align: center;">About Me</h2>
-        <p style="max-width: 800px; margin: 20px auto; text-align: center; line-height: 1.6;">
-            Hi, I'm Tarshit, a corporate professional transitioning into IT backend development. 
-            I enjoy building efficient and scalable web applications using Python, Django, and related technologies.
+
+  <!-- About Me Section -->
+<!-- About Me Section (Styled as Code Editor) -->
+<section class="portfolio-about">
+  <h2>About Me</h2>
+  <div class="code-editor">
+    <div class="editor-header">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+    </div>
+    <div class="code-content">
+      <p><span class="comment">// Who am I?</span></p>
+      <p><span class="keyword">const</span> name = <span class="string">"Tarshit Arya"</span>;</p>
+      <p><span class="keyword">const</span> role = <span class="string">"Backend Developer"</span>;</p>
+      <p><span class="keyword">const</span> stack = [<span class="string">"Python"</span>, <span class="string">"Django"</span>, <span class="string">"FastAPI"</span>];</p>
+      <br />
+      <p><span class="keyword">function</span> introduce() {'{'}</p>
+      <p class="indent">console.log(<span class="string">`Hi, I'm ${name}, a ${role} skilled in ${stack}`</span>);</p>
+      <p>{'}'}</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Skills Section -->
+  <section class="portfolio-skills">
+    <h2>Technologies Used</h2>
+    <div class="skill-grid">
+      <span><strong>Backend:</strong> Python, Django</span>
+      <span><strong>Frontend:</strong> HTML, CSS, Bootstrap</span>
+      <span><strong>Database:</strong> Django ORM, PostgreSQL, MySQL, SQLite</span>
+      <span><strong>Authentication:</strong> Django’s built-in authentication system</span>
+      <span><strong>Media Handling:</strong> Django Media File support for image uploads</span>
+      <span><strong>Tools:</strong> Git, GitHub, VS Code</span>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="portfolio-projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>
+          I built a personal portfolio website to showcase my skills, experience, and projects as a backend developer. The site features a clean, responsive design using HTML, CSS, and Bootstrap, providing easy navigation across sections like About Me, Projects, and Contact. It highlights my expertise in Python, Django, FastAPI, and REST APIs, along with downloadable resumes and links to my GitHub. The portfolio acts as a professional online presence, demonstrating my coding abilities and project work while offering a clear way for potential employers or clients to learn about me and get in touch.
         </p>
-    </section>
+      </div>
+      <div class="project-card">
+        <h3>Blog Web</h3>
+        <p>
+          I developed a full-featured blog application using Python and Django where users can register, log in, and create posts with images. The app supports complete CRUD operations — users can create, read, update, and delete their own posts while viewing others’ blogs. Authentication and authorization ensure secure user interactions, restricting editing and deleting rights to post owners only. The project incorporates Django’s media file handling for image uploads and showcases my backend development skills, including database design, user authentication, and building interactive, user-friendly web applications.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section style="padding: 50px; background-color: #e8e8e8;">
-        <h2 style="text-align: center;">Skills</h2>
-        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 30px;">
-            <div style="background-color: #fff; padding: 20px; border-radius: 10px; width: 150px; text-align: center;">
-                Python
-            </div>
-            <div style="background-color: #fff; padding: 20px; border-radius: 10px; width: 150px; text-align: center;">
-                Django
-            </div>
-            <div style="background-color: #fff; padding: 20px; border-radius: 10px; width: 150px; text-align: center;">
-                Fast API
-            </div>
-            <div style="background-color: #fff; padding: 20px; border-radius: 10px; width: 150px; text-align: center;">
-                Git & GitHub
-            </div>
-            <div style="background-color: #fff; padding: 20px; border-radius: 10px; width: 150px; text-align: center;">
-                Django ORM
-            </div>
-            <div style="background-color: #fff; padding: 20px; border-radius: 10px; width: 150px; text-align: center;">
-                SQL
-            </div>
-            <div style="background-color: #fff; padding: 20px; border-radius: 10px; width: 150px; text-align: center;">
-                HTML/CSS
-            </div>
-            <div style="background-color: #fff; padding: 20px; border-radius: 10px; width: 150px; text-align: center;">
-                Bootstrap
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section style="padding: 50px; background-color: #fff;">
-        <h2 style="text-align: center;">Projects</h2>
-        <div style="max-width: 900px; margin: 30px auto; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-            <div style="background-color: #e8e8e8; padding: 20px; border-radius: 10px; width: 250px;">
-                <h3 style="text-align: center;">PORTFOLIO WEBSITE</h3>
-                <p style="text-align: center;">Developed a dynamic personal portfolio website using Django for the backend and HTML, CSS, and Bootstrap for the
-frontend. The site showcases personal projects, technical skills, contact information, and work history. Implemented
-Django templates for rendering dynamic content, and integrated a contact form with backend form validation and email
-functionality. Utilized Django’s admin panel for easy content management and SQLite for data storage.</p>
-            </div>
-            <div style="background-color: #e8e8e8; padding: 20px; border-radius: 10px; width: 250px;">
-                <h3 style="text-align: center;">E-COMMERCE WEBSITE</h3>
-                <p style="text-align: center;">Built a fully functional E-commerce web application using Django for backend logic and HTML/CSS/Bootstrap for the
-frontend. The platform allows users to browse products, add items to a cart, register and log in, and place orders.
-Implemented Django's authentication system for secure login, and created custom models for products, orders, and user
-profiles. Admin dashboard enables product and order management. Designed a responsive and user-friendly interface to
-ensure accessibility across all devices.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section style="padding: 50px; background-color: #e8e8e8;">
-        <h2 style="text-align: center;">Contact</h2>
-        <p style="text-align: center; margin: 20px 0;">Email: aryatarshit@gmail.com</p>
-        <p style="text-align: center; margin: 20px 0;">Phone: +91 99975 89331</p>
-    </section>
-
-
+  <!-- Contact Section -->
+  <section class="portfolio-contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:aryatarshit@gmail.com">aryatarshit@gmail.com</a></p>
+    <p>Phone: <a href="tel:+919997589331">+91 99975 89331</a></p>
+  </section>
+  
+</main>
 {% endblock %}

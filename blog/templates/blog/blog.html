@@ -2,38 +2,65 @@
 {% block title %}Blog{% endblock %}
 {% block content %}
 
+<main class="blog-page">
+
   <!-- Header -->
-  <header style="background: #333; color: white; text-align: center; padding: 20px;">
-    <h1 style="margin: 0;">My Personal Blog</h1>
-    <p style="margin: 0;">Thoughts, projects, and experiences</p>
-  </header>
+  <section class="blog-hero">
+    <h1>Blog</h1>
+    <p>Thoughts, Projects & Learning</p>
+  </section>
 
-  <!-- Blog Section -->
-  <main style="max-width: 800px; margin: 20px auto; padding: 10px;">
+  <!-- Blog List -->
+  <section class="blog-list">
 
-    <!-- Blog Post 1 -->
-    <article style="background: white; padding: 20px; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-      <h2 style="color: #333; margin-top: 0;">First Blog Post</h2>
-      <p style="color: #777; font-size: 14px;">Published on September 1, 2025</p>
-      <p style="line-height: 1.6; color: #444;">
-        Welcome to my first blog post! Here I will share my journey of becoming a backend developer,
-        the projects I’m working on, and some lessons I learn along the way.
+    <!-- Blog Post Cards -->
+    <article class="blog-post">
+      <h2 class="post-title">Mastering Django Models</h2>
+      <p class="post-meta">September 2, 2025 • Tips & Tutorials</p>
+      <p class="post-snippet">
+        Django models are the backbone of your database logic. Learn how to build powerful, reusable, and efficient models with proper relationships and custom managers.
       </p>
-      <a href="#" style="color: #007BFF; text-decoration: none;">Read more...</a>
+      <a href="#" class="read-more">Read more →</a>
     </article>
 
-    <!-- Blog Post 2 -->
-    <article style="background: white; padding: 20px; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-      <h2 style="color: #333; margin-top: 0;">Learning Django</h2>
-      <p style="color: #777; font-size: 14px;">Published on August 28, 2025</p>
-      <p style="line-height: 1.6; color: #444;">
-        Recently, I started learning Django to build my personal portfolio. 
-        It’s amazing how powerful and beginner-friendly this framework is for backend development.
+    <article class="blog-post">
+      <h2 class="post-title">Understanding REST APIs with DRF</h2>
+      <p class="post-meta">August 30, 2025 • Backend</p>
+      <p class="post-snippet">
+        Explore how to use Django REST Framework to build scalable APIs—serializers, auth, pagination, best practices.
       </p>
-      <a href="#" style="color: #007BFF; text-decoration: none;">Read more...</a>
+      <a href="#" class="read-more">Read more →</a>
     </article>
 
-  </main>
+    <article class="blog-post">
+      <h2 class="post-title">FastAPI vs Django: Which to Choose?</h2>
+      <p class="post-meta">August 25, 2025 • Comparison</p>
+      <p class="post-snippet">
+        A detailed comparison of Django and FastAPI for backend work—performance, speed, development experience and deployment.
+      </p>
+      <a href="#" class="read-more">Read more →</a>
+    </article>
 
+    <article class="blog-post">
+      <h2 class="post-title">Version Control Mastery with Git & GitHub</h2>
+      <p class="post-meta">August 22, 2025 • Workflow</p>
+      <p class="post-snippet">
+        Branching, merging, pull requests, CI/CD pipelines—level up your version control for team and solo projects.
+      </p>
+      <a href="#" class="read-more">Read more →</a>
+    </article>
+
+    <article class="blog-post">
+      <h2 class="post-title">Database Optimization in Django</h2>
+      <p class="post-meta">August 18, 2025 • Best Practices</p>
+      <p class="post-snippet">
+        Avoid performance pitfalls with select_related, prefetch_related, indexing, and query optimization in Django.
+      </p>
+      <a href="#" class="read-more">Read more →</a>
+    </article>
+
+  </section>
+
+</main>
 
 {% endblock %}

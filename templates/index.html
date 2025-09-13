@@ -5,34 +5,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title %}Tarshit Arya{% endblock %}</title>
+    <title>{% block title %} Tarshit Arya | Portfolio {% endblock %}</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="{% static 'style.css' %}" />
   </head>
+
   <body>
+    <!-- Header -->
     <header>
-      <nav>
-        <div class="logo">Tarshit</div>
-        <ul class="nav-link">
-          <li><a href="{% url 'home' %}">Home</a></li>
-          <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
-          <li><a href="{% url 'blog' %}">Blog</a></li>
-          <li><a href="{% url 'contact' %}">Contact</a></li>
+      <div class="nav-container">
+        <div class="logo">
+          <img src="{% static 'img/logo_icon.png' %}" alt="Logo" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="{% url 'home' %}">home</a></li>
+          <li><a href="{% url 'about' %}">about</a></li>
+          <li><a href="{% url 'portfolio' %}">portfolio</a></li>
+          <li><a href="{% url 'blog' %}">blog</a></li>
+          <li><a href="{% url 'contact' %}">contact</a></li>
         </ul>
-      </nav>
+        <div class="social-icons">
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
     </header>
 
-    {% block content %}
+{% block content %}
 
-    <div class="home-background">
-      <h1 class="call">Hi, I'm Tarshit</h1>
-    </div>
+    <!-- Main Content -->
+    <main class="split-home">
+      <section class="left-text">
+        <h1>&lt;Developer&gt;</h1>
+        <p>Python & Django developer crafting scalable, clean web apps with modern backend logic and APIs.</p>
+      </section>
+
+      <section class="hero-image">
+        <img src="{% static 'img/home_bg.png' %}" alt="Tarshit Portrait" />
+      </section>
+
+      <section class="right-text">
+        <h1>&lt;coder&gt;</h1>
+        <p>Front end developer who writes clean, elegant and efficient code.</p>
+      </section>
+    </main>
+
     {% endblock %}
 
-    <footer
-      style="background: #333; color: white; text-align: center; padding: 10px"
-    >
-      <p style="margin: 0">© 2025 Tarshit | My Portfolio</p>
+    <!-- Optional Footer -->
+    <footer>
+      <p>© 2025 Tarshit Arya | All rights reserved</p>
     </footer>
+
+    <!-- Font Awesome CDN (for icons) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   </body>
 </html>
