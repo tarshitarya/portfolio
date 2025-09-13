@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-i3*6neudybosef)=el(k73%pb9+ei9y#nb^^ip!04@!4&b)=t&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'tarshit.onrender.com',
+]
 
 
 # Application definition
