@@ -65,8 +65,8 @@
     <div class="contact-info-wrapper">
       <h3>These people reached out to me</h3>
       <ul class="contact-list">
-        {% for contact in Contacts %}
-          <li><strong>{{ contact.name }}</strong>{% comment %} {{ contact.message }} {% endcomment %}</li>
+        {% for contact in Contacts|slice:"0:5" %}
+          <li><strong>{{ contact.name }}</strong></li>
         {% empty %}
           <li>No messages yet.</li>
         {% endfor %}
